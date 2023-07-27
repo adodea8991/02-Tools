@@ -1,0 +1,25 @@
+## Add the following code to a file with the .plist extension:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.todo-list</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/path/to/your/script.py</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
+
+
+
+## Move the file to this path using the following command (Make sure the terminal is in this folder):
+mv ToDoListStart.plist ~/Library/LaunchAgents/
+
+## Then initialize this code in order to start on demand:
+launchctl load ~/Library/LaunchAgents/ToDoListStart-list.plist
